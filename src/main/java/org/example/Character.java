@@ -8,7 +8,10 @@ public class Character {
     public int hp;
     public int maxHp;
 
-
+    @Deprecated
+    /**
+     @deprecated - nie używać, zostanie usunięte w wersji 2.15
+     **/
     private FacebookProvider facebookProvider;
 
     public Character(String firstName, String lastName, int maxHp, FacebookProvider facebookProvider){
@@ -28,7 +31,10 @@ public class Character {
         other.hp--;
     }
 
-
+    @Deprecated
+    /**
+     @deprecated - nie używać, zostanie usunięte w wersji 2.15
+     **/
     public void attackFriends() throws Exception {
         List<Character> friends = facebookProvider.GetFriends(getFullName());
         for (Character friend:friends){
@@ -38,5 +44,6 @@ public class Character {
     }
     public boolean isAlive(){
         return hp > 0;
+   
     }
 }
